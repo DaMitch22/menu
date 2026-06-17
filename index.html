@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta dei Gin - Da Mitch</title>
+    <style>
+        /* Reset totale per occupare tutto lo schermo */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #111;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        // Prende in automatico l'indirizzo internet del tuo sito GitHub
+        const currentUrl = window.location.href.split('index.html')[0];
+        
+        // Costruisce il link diretto al tuo PDF su GitHub
+        const pdfUrl = currentUrl + "CartaGin-DaMitch.pdf";
+        
+        // Usa il visualizzatore universale di Google che permette lo scroll di tutte le pagine su iPhone
+        const googleViewerUrl = "https://docs.google.com/viewer?url=" + encodeURIComponent(pdfUrl) + "&embedded=true";
+        
+        // Crea l'iframe a schermo intero
+        document.write('<iframe src="' + googleViewerUrl + '"></iframe>');
+    </script>
+
+</body>
+</html>
